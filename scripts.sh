@@ -31,13 +31,3 @@ sudo sed -i '/index  index.html index.htm;/s/$/ \n\tautoindex on;/' /etc/nginx/c
 
 sudo nginx -s reload
 
-sudo cat >> /etc/yum.repos.d/otus.repo << EOF
-[otus]
-name=CentOS_7
-baseurl=http://localhost/repo
-gpgcheck=0
-enabled=1
-EOF
-sudo yum clean all
-
-echo FINISH
