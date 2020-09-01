@@ -1,8 +1,6 @@
 sudo yum -y update
 sudo yum -y install nano
-sudo cd /vagrant
-sudo mkdir -p rpmbuild/RPMS/x86_64/
-sudo mkdir -p rpmbuild/SPECS/
+sudo mkdir -p rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
 sudo mkdir -p mkdir /usr/share/nginx/html/repo
 
 sudo yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils openssl-devel zlib-devel pcre-devel gcc libtool perl-core openssl
