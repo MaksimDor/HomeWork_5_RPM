@@ -124,3 +124,4 @@ built with OpenSSL 1.0.2k-fips  26 Jan 2017
 TLS SNI support enabled
 ```
 На хостовой машине в браузере откроем страницу http://192.168.189.10 (где IP-адрес — это адрес, указанный в Vagrantfile) и убедимся, что Nginx работает:
+
