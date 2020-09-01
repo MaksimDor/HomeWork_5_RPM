@@ -1,7 +1,7 @@
 sudo yum -y update
 sudo yum -y install nano
 sudo mkdir -p rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS}
-sudo mkdir -p mkdir /usr/share/nginx/html/repo
+sudo mkdir -p usr/share/nginx/html/repo
 
 sudo yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils openssl-devel zlib-devel pcre-devel gcc libtool perl-core openssl
 
@@ -23,8 +23,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 
 sudo cp /vagrant/rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm /usr/share/nginx/html/repo/
-
-sudo wget http://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm -O /usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm
+sudo wget https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-redhat96-9.6-3.noarch.rpm -O /usr/share/nginx/html/repo/pgdg-redhat96-9.6-3.noarch.rpm
 
 sudo createrepo /usr/share/nginx/html/repo/
 
