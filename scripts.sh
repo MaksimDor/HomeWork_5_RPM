@@ -15,9 +15,9 @@ sudo tar -xf latest.tar.gz
 
 sudo yum-builddep -y rpmbuild/SPECS/nginx.spec
 
-sed -i 's/--with-debug/--with-openssl=\/rpmbuild\/openssl-1.1.1c/g' /rpmbuild/SPECS/nginx.spec
+sudo sed -i 's/--with-debug/--with-openssl=\/rpmbuild\/openssl-1.1.1c/g' /rpmbuild/SPECS/nginx.spec
 
-rpmbuild -bb /rpmbuild/SPECS/nginx.spec
+sudo rpmbuild -bb /rpmbuild/SPECS/nginx.spec
 
 sudo systemctl start nginx
 sudo systemctl enable nginx
