@@ -91,11 +91,11 @@ systemctl enable nginx
 
 **Создадим репозиторий**
 
-**Копируем в этот каталог /usr/share/nginx/html/repo/ два RPM-пакета: пакет Nginx, собранный ранее, и пакет для установки репозитория Percona-Server**
+**Копируем в этот каталог /usr/share/nginx/html/repo/ два RPM-пакета: пакет Nginx, собранный ранее. также скачаем RPM для postgresql**
 
 ```
-cp /root/rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm /usr/share/nginx/html/repo/
-wget http://www.percona.com/downloads/percona-release/redhat/0.1-6/percona-release-0.1-6.noarch.rpm -O /usr/share/nginx/html/repo/percona-release-0.1-6.noarch.rpm
+sudo cp /root/rpmbuild/RPMS/x86_64/nginx-1.14.1-1.el7_4.ngx.x86_64.rpm /usr/share/nginx/html/repo/
+sudo wget https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-redhat96-9.6-3.noarch.rpm -O /usr/share/nginx/html/repo/pgdg-redhat96-9.6-3.noarch.rpm
 ```
 **Инициализируем репозиторий**
 
